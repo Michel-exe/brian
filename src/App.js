@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style/colores.css"
+import "./style/e.css"
+import "./style/style.css"
+import Api from './api/export';
+import logo from './media/img_logo.png';
+// import Ordenar from "./components/modal/Ordenar"
+// import Context from "./context/context";
+import { useState } from "react";
+import Orden from "./components/modal/Orden";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   // let [type, setType] = useState("platillos");
+   let [sca, setSca] = useState("0");
+   let [nod, setNod] = useState("");
+   return (
+      <div className="App">
+         {/* <Ordenar scale={sca} type={type} /> */}
+         <Orden scala={sca} nodos={nod} />
+         <div className="cuerpo">
+            <h1>
+               <picture>
+                  <img src={logo} alt="logo" />
+               </picture>
+               Sushi Maki
+            </h1>
+            <Api setSca="" />
+            <button id="abrirOrden" onClick={()=>{
+               setNod(document.querySelectorAll(".ordenado"))
+               // console.log(document.querySelectorAll(".ordenado"))
+               // console.log(nod);
+               setSca("1")
+            }}>Ordenar</button>
+         </div>
+      </div>
+   );
 }
 
 export default App;
