@@ -1,5 +1,5 @@
 import "./style/style.css"
-import {Header2 as Header} from "./components/Header";
+import {Header3 as Header} from "./components/Header";
 import { Presentacion as Presentacion } from "./components/Presentacion";
 import { useState } from "react";
 import { Habilities } from "./components/Habilities";
