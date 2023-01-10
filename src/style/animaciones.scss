@@ -1,0 +1,85 @@
+
+@keyframes presTop{
+    from{
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes presImg{
+    from{
+        transform: translateX(-60px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes presTxt{
+    from{
+        transform: translateX(60px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes spiner {
+    to{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes subir {
+    from{
+        transform: translateY(100vh);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes carga {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes vuelta {
+    0%{
+        top:5px;
+        left:5px;
+    }
+    25%{
+        top:-5px;
+        left:5px;
+    }
+    50%{
+        top:-5px;
+        left:-5px;
+    }
+    75%{
+        top:5px;
+        left:-5px;
+    }
+    100%{
+        top:5px;
+        left:5px;
+    }
+}
+@keyframes subida {
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
