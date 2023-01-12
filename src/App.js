@@ -6,16 +6,16 @@ import logo from './media/img_logo.png';
 // import Ordenar from "./components/modal/Ordenar"
 // import Context from "./context/context";
 import { useState } from "react";
-import Orden from "./components/modal/Orden";
+import Ordenar from "./components/modal/Ordenar";
 
 function App() {
-   // let [type, setType] = useState("platillos");
-   let [sca, setSca] = useState("0");
+   let [type, setType] = useState("platillos");
+   let [sca, setSca] = useState(".3");
    let [nod, setNod] = useState("");
    return (
       <div className="App">
          {/* <Ordenar scale={sca} type={type} /> */}
-         <Orden scala={sca} nodos={nod} />
+         <Ordenar scala={sca} setScala={setSca} type={type} nodos={nod} />
          <div className="cuerpo">
             <h1>
                <picture>
@@ -23,7 +23,7 @@ function App() {
                </picture>
                Sushi Maki
             </h1>
-            <Api setSca="" />
+            <Api setSca={setSca} />
             <button id="abrirOrden" onClick={()=>{
                setNod(document.querySelectorAll(".ordenado"))
                // console.log(document.querySelectorAll(".ordenado"))

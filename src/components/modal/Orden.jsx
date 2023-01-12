@@ -1,6 +1,6 @@
 export default function Orden({scala,nodos}) {
-    console.log(nodos[0].getAttribute("data-name") ? "1" : "0");
-    console.log(nodos[0].getAttribute("data-cost") ? "1" : "0");
+    // console.log(nodos[0].getAttribute("data-name") ? "1" : "0");
+    // console.log(nodos[0].getAttribute("data-cost") ? "1" : "0");
     return (
         <div className="dialog orden" id="orden" style={{ zIndex:"3", transform: `scale(${scala})` }}>
             <section>

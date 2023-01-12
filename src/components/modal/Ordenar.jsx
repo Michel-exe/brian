@@ -1,18 +1,19 @@
 import { useContext, useState } from "react"
 import Context from "../../context/context";
 
-export default function ({scale,type}) {
-    const con = useContext(Context)
-    console.log(con);
-    let [sca,setSca] = useState(con.scale)
+export default function ({scala,setScala,type}) {
+    console.log(scala);
+    // const con = useContext(Context)
+    // console.log(con);
+    // let [sca,setSca] = useState(scala)
     // const style ={
     //     transform:`scale(${sca})`
     // }
     return (
-        <div className={"dialog "+type} style={{transform:`scale(${sca})`}}>
+        <div className={"dialog "+type} style={{transform:`scale(${scala})`,zIndex:4}}>
             <section>
                 <h2 onClick={()=>{
-                    setSca(con.scaleClick)
+                    setScala("0")
                 }}>Ordenar Platillo</h2>
                 <form action="" id="formPlatillos">
                     <label htmlFor="inputPlatillos">¿Cuantas ordenes desea pedir?</label>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export default function Platillo ({ setSca, plat, cost, ingr }) {
-    // console.log(setSca);
     let [clase,setclase ] = useState("")
     let pl=plat.replaceAll(" ","")
     return (
@@ -20,6 +19,7 @@ export default function Platillo ({ setSca, plat, cost, ingr }) {
             <small>{ingr}</small>
             <div className="tapa" onClick={() =>{ 
                 setclase("ordenado")
+                setSca(".5")
                 localStorage.setItem("tmpPlat",("pl"+pl))
                 // console.log(setSca);
                 // setSca("1")
